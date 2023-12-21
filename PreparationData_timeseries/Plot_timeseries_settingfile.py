@@ -1,0 +1,380 @@
+##############################################################################
+# Setting file for the code : Plot_timeseries_settingfile.py
+#
+# Author : S. Morard
+# Created on 07.12.2023
+# Updated on 07.12.2023
+#
+# We just need to give following the model the variables. There are two
+# functions at the end of the code to store the dictionnary into a binary file
+# and then to retrieve it later.
+#
+##############################################################################
+
+# Dictionnary
+
+plot = {
+        'fontstyle' : 'Verdana' ,
+        'transparent_background' : True ,
+        'savefig' : 'tight'
+        }
+
+# model = {
+#     'path' : 'C:/Users/MorardSa/Documents/code/essai/' ,
+#     'filename' : '' ,
+#     'index_date_col' : 0 ,
+#     'index_var_col' : 1 ,
+#     'variable_name' : '' ,
+#     'date_format' : '' ,
+#     'x_width' : 15 ,
+#     'y_width' : 5 ,
+#     'fontsize' : 13 ,
+#     'plot_gaps' : 'y' ,
+#     'symbol' : '-x' ,
+#     'markersize' : 5 ,
+#     'color' : 'darkturquoise',
+#     'label' : '' ,
+#     'ylabel' : '' ,
+#     'lim' : 5,
+#     'xlim_min' : 2002,
+#     'xlim_max' : 2024
+#     }
+
+
+STO_Tair = {
+    'path' : 'C:/Users/MorardSa/Documents/code/GitHub_test/' ,
+    'filename_h' : 'STO_Tair_20060101_20230126_h',
+    'filename_d' : 'STO_Tair_20020612_20230125_d',
+    'filename_m' : 'STO_Tair_20020612_20230125_d_monthly',
+    'filename_hy' : 'STO_Tair_20020612_20230125_d_yearlyhyd',
+    'filename_y' : 'STO_Tair_20020612_20230125_d_yearly' ,
+    'index_date_col' : 0 ,
+    'index_var_col' : 1 ,
+    'variable_name' : 'Tair' ,
+    'date_format' : '' ,
+    'x_width' : 15 ,
+    'y_width' : 5 ,
+    'fontsize' : 13 ,
+    'plot_gaps' : 'y' ,
+    'symbol' : '-x' ,
+    'markersize' : 5 ,
+    'color' : 'darkturquoise',
+    'label' : 'air temperature' ,
+    'ylabel' : 'Air temperature [°C]' ,
+    'lim' : 5,
+    'lim_1' : 1,
+    'xlim_min' : 2002,
+    'xlim_max' : 2024
+    }
+
+STO_Pair = {
+    'path' : 'C:/Users/MorardSa/Documents/code/GitHub_test/' ,
+    'filename_h' : '',
+    'filename_d' : '',
+    'filename_m' : '',
+    'filename_hy' : '',
+    'filename_y' : '' ,
+    'index_date_col' : 0 ,
+    'index_var_col' : 1 ,
+    'variable_name' : 'Pair' ,
+    'date_format' : '' ,
+    'x_width' : 15 ,
+    'y_width' : 5 ,
+    'fontsize' : 13 ,
+    'plot_gaps' : 'y' ,
+    'symbol' : '-x' ,
+    'markersize' : 5 ,
+    'color' : 'darkturquoise',
+    'label' : 'air pressure' ,
+    'ylabel' : 'Air Pressure [hPa]' ,
+    'lim' : ,
+    'lim_1' : ,
+    'xlim_min' : 2002,
+    'xlim_max' : 2024
+    }
+
+STO_Lin = {
+    'path' : 'C:/Users/MorardSa/Documents/code/GitHub_test/' ,
+    'filename_h' : '',
+    'filename_d' : '',
+    'filename_m' : '',
+    'filename_hy' : '',
+    'filename_y' : '' ,
+    'index_date_col' : 0 ,
+    'index_var_col' : 1 ,
+    'variable_name' : 'Lin' ,
+    'date_format' : '' ,
+    'x_width' : 15 ,
+    'y_width' : 5 ,
+    'fontsize' : 13 ,
+    'plot_gaps' : 'y' ,
+    'symbol' : '-x' ,
+    'markersize' : 5 ,
+    'color' : 'darkturquoise',
+    'label' : 'ingoing longwave radiation' ,
+    'ylabel' : 'In. longwave rad. [W/m^2]' ,
+    'lim' : ,
+    'lim_1' : ,
+    'xlim_min' : 2002,
+    'xlim_max' : 2024
+    }
+
+STO_Lout = {
+    'path' : 'C:/Users/MorardSa/Documents/code/GitHub_test/' ,
+    'filename_h' : '',
+    'filename_d' : '',
+    'filename_m' : '',
+    'filename_hy' : '',
+    'filename_y' : '' ,
+    'index_date_col' : 0 ,
+    'index_var_col' : 1 ,
+    'variable_name' : 'Lout' ,
+    'date_format' : '' ,
+    'x_width' : 15 ,
+    'y_width' : 5 ,
+    'fontsize' : 13 ,
+    'plot_gaps' : 'y' ,
+    'symbol' : '-x' ,
+    'markersize' : 5 ,
+    'color' : 'darkturquoise',
+    'label' : 'outgoing longwave radiation' ,
+    'ylabel' : 'Out. longwave rad. [W/m^2]' ,
+    'lim' : ,
+    'lim_1' : ,
+    'xlim_min' : 2002,
+    'xlim_max' : 2024
+    }
+
+STO_Sin = {
+    'path' : 'C:/Users/MorardSa/Documents/code/GitHub_test/' ,
+    'filename_h' : '',
+    'filename_d' : '',
+    'filename_m' : '',
+    'filename_hy' : '',
+    'filename_y' : '' ,
+    'index_date_col' : 0 ,
+    'index_var_col' : 1 ,
+    'variable_name' : 'Sin' ,
+    'date_format' : '' ,
+    'x_width' : 15 ,
+    'y_width' : 5 ,
+    'fontsize' : 13 ,
+    'plot_gaps' : 'y' ,
+    'symbol' : '-x' ,
+    'markersize' : 5 ,
+    'color' : 'darkturquoise',
+    'label' : 'ingoing shortwave rad.' ,
+    'ylabel' : 'In. shortwave rad. [W/m^2]' ,
+    'lim' : ,
+    'lim_1' : ,
+    'xlim_min' : 2002,
+    'xlim_max' : 2024
+    }
+
+STO_Sout = {
+    'path' : 'C:/Users/MorardSa/Documents/code/GitHub_test/' ,
+    'filename_h' : '',
+    'filename_d' : '',
+    'filename_m' : '',
+    'filename_hy' : '',
+    'filename_y' : '' ,
+    'index_date_col' : 0 ,
+    'index_var_col' : 1 ,
+    'variable_name' : 'Sout' ,
+    'date_format' : '' ,
+    'x_width' : 15 ,
+    'y_width' : 5 ,
+    'fontsize' : 13 ,
+    'plot_gaps' : 'y' ,
+    'symbol' : '-x' ,
+    'markersize' : 5 ,
+    'color' : 'darkturquoise',
+    'label' : 'outgoing shortwave radiation' ,
+    'ylabel' : 'Out. shortwave rad. [W/m^2]' ,
+    'lim' : ,
+    'lim_1' : ,
+    'xlim_min' : 2002,
+    'xlim_max' : 2024
+    }
+
+STO_RH = {
+    'path' : 'C:/Users/MorardSa/Documents/code/GitHub_test/' ,
+    'filename_h' : '',
+    'filename_d' : '',
+    'filename_m' : '',
+    'filename_hy' : '',
+    'filename_y' : '' ,
+    'index_date_col' : 0 ,
+    'index_var_col' : 1 ,
+    'variable_name' : 'RH' ,
+    'date_format' : '' ,
+    'x_width' : 15 ,
+    'y_width' : 5 ,
+    'fontsize' : 13 ,
+    'plot_gaps' : 'y' ,
+    'symbol' : '-x' ,
+    'markersize' : 5 ,
+    'color' : 'darkturquoise',
+    'label' : 'relative humidity' ,
+    'ylabel' : 'Relative humidity [%]' ,
+    'lim' : ,
+    'lim_1' : ,
+    'xlim_min' : 2002,
+    'xlim_max' : 2024
+    }
+
+STO_SH = {
+    'path' : 'C:/Users/MorardSa/Documents/code/GitHub_test/' ,
+    'filename_h' : '',
+    'filename_d' : '',
+    'filename_m' : '',
+    'filename_hy' : '',
+    'filename_y' : '' ,
+    'index_date_col' : 0 ,
+    'index_var_col' : 1 ,
+    'variable_name' : 'SH' ,
+    'date_format' : '' ,
+    'x_width' : 15 ,
+    'y_width' : 5 ,
+    'fontsize' : 13 ,
+    'plot_gaps' : 'y' ,
+    'symbol' : '-x' ,
+    'markersize' : 5 ,
+    'color' : 'darkturquoise',
+    'label' : 'specific humidity' ,
+    'ylabel' : 'Specific humidity [kg water/kg air]' ,
+    'lim' : ,
+    'lim_1' : ,
+    'xlim_min' : 2002,
+    'xlim_max' : 2024
+    }
+
+STO_snowfall = {
+    'path' : 'C:/Users/MorardSa/Documents/code/GitHub_test/' ,
+    'filename_h' : '',
+    'filename_d' : '',
+    'filename_m' : '',
+    'filename_hy' : '',
+    'filename_y' : '' ,
+    'index_date_col' : 0 ,
+    'index_var_col' : 1 ,
+    'variable_name' : 'snowfall' ,
+    'date_format' : '' ,
+    'x_width' : 15 ,
+    'y_width' : 5 ,
+    'fontsize' : 13 ,
+    'plot_gaps' : 'y' ,
+    'symbol' : '-x' ,
+    'markersize' : 5 ,
+    'color' : 'darkturquoise',
+    'label' : 'snowfall' ,
+    'ylabel' : 'Snowfall [mm/day]' ,
+    'lim' : ,
+    'lim_1' : ,
+    'xlim_min' : 2002,
+    'xlim_max' : 2024
+    }
+
+STO_rainfall = {
+    'path' : 'C:/Users/MorardSa/Documents/code/GitHub_test/' ,
+    'filename_h' : '',
+    'filename_d' : '',
+    'filename_m' : '',
+    'filename_hy' : '',
+    'filename_y' : '' ,
+    'index_date_col' : 0 ,
+    'index_var_col' : 1 ,
+    'variable_name' : 'rainfall' ,
+    'date_format' : '' ,
+    'x_width' : 15 ,
+    'y_width' : 5 ,
+    'fontsize' : 13 ,
+    'plot_gaps' : 'y' ,
+    'symbol' : '-x' ,
+    'markersize' : 5 ,
+    'color' : 'darkturquoise',
+    'label' : 'rainfall' ,
+    'ylabel' : 'Rainfall [mm/day]' ,
+    'lim' : ,
+    'lim_1' : ,
+    'xlim_min' : 2002,
+    'xlim_max' : 2024
+    }
+
+STO_snowh = {
+    'path' : 'C:/Users/MorardSa/Documents/code/GitHub_test/' ,
+    'filename_h' : '',
+    'filename_d' : '',
+    'filename_m' : '',
+    'filename_hy' : '',
+    'filename_y' : '' ,
+    'index_date_col' : 0 ,
+    'index_var_col' : 1 ,
+    'variable_name' : 'snowh' ,
+    'date_format' : '' ,
+    'x_width' : 15 ,
+    'y_width' : 5 ,
+    'fontsize' : 13 ,
+    'plot_gaps' : 'y' ,
+    'symbol' : '-x' ,
+    'markersize' : 5 ,
+    'color' : 'darkturquoise',
+    'label' : 'snow height' ,
+    'ylabel' : 'Snow height [m]' ,
+    'lim' : ,
+    'lim_1' : ,
+    'xlim_min' : 2002,
+    'xlim_max' : 2024
+    }
+
+STO_wd = {
+    'path' : 'C:/Users/MorardSa/Documents/code/GitHub_test/' ,
+    'filename_h' : '',
+    'filename_d' : '',
+    'filename_m' : '',
+    'filename_hy' : '',
+    'filename_y' : '' ,
+    'index_date_col' : 0 ,
+    'index_var_col' : 1 ,
+    'variable_name' : 'wd' ,
+    'date_format' : '' ,
+    'x_width' : 15 ,
+    'y_width' : 5 ,
+    'fontsize' : 13 ,
+    'plot_gaps' : 'y' ,
+    'symbol' : '-x' ,
+    'markersize' : 5 ,
+    'color' : 'darkturquoise',
+    'label' : 'wind direction' ,
+    'ylabel' : 'Wind direction [°]' ,
+    'lim' : ,
+    'lim_1' : ,
+    'xlim_min' : 2002,
+    'xlim_max' : 2024
+    }
+
+STO_ws = {
+    'path' : 'C:/Users/MorardSa/Documents/code/GitHub_test/' ,
+    'filename_h' : '',
+    'filename_d' : '',
+    'filename_m' : '',
+    'filename_hy' : '',
+    'filename_y' : '' ,
+    'index_date_col' : 0 ,
+    'index_var_col' : 1 ,
+    'variable_name' : 'ws' ,
+    'date_format' : '' ,
+    'x_width' : 15 ,
+    'y_width' : 5 ,
+    'fontsize' : 13 ,
+    'plot_gaps' : 'y' ,
+    'symbol' : '-x' ,
+    'markersize' : 5 ,
+    'color' : 'darkturquoise',
+    'label' : 'wind speed' ,
+    'ylabel' : 'Wind speed [m/s]' ,
+    'lim' : ,
+    'lim_1' : ,
+    'xlim_min' : 2002,
+    'xlim_max' : 2024
+    }
