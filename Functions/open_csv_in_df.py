@@ -49,6 +49,9 @@ def open_csv_in_df( path , filename , index_date_col , index_var_col , variable_
     
     else : #one variable
         data = data.rename( columns = { data.columns[ index_var_col ] : variable_name } ) 
+        
+    data.to_csv( path + filename + '_mod.csv' , index = False , sep = ';' )
     
     return data
+
 
