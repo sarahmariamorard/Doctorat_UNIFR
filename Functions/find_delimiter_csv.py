@@ -3,6 +3,11 @@
 def find_delimiter_csv( filename ) :
     #Goal: Find the seperator in a csv file automatically
     
+    #input = 1 csv file
+    #output = separator
+    
+    #filename => path + filename + extent
+    
     ## Packages
     import csv  #The csv module implements classes to read and write tabular data 
                 #in CSV format. 
