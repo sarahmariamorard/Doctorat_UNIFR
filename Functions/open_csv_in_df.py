@@ -62,10 +62,8 @@ def open_csv_in_df( path , filename , index_date_col , index_var_col , variable_
     data.set_index( data.columns[ index_date_col ] ) #Index the lines
 
     data_name_col = np.asarray( data.columns ) #name of the columns in the dataFrame
-    
+    print( f'The data shape is {data.shape}.' )
+
     data.to_csv( path + filename + '_mod.csv' , index = False , sep = ';' )
     
     return data , data_name_col
-
-
-
