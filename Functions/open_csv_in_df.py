@@ -18,9 +18,18 @@ def find_delimiter_csv( filename ) :
 def open_csv_in_df( path , filename , index_date_col , index_var_col , variable_name , date_format ) :
     #Goal: Open a csv file in a pandas dataframe format automatically
     
+    #input = 1 csv file
+    #output = 1 csv file + name of the columns
+    
+    #path => where the csv file is
+    #filename => name of the csv file without the extent
+    #index_date_col => normally 0
     #index_var_col =>  should be a scalar if there is one variable, a list if there are more than 1
     #variable_name => a string if there is one variable, a list if there are more than 1
-    
+    #date_format => 
+        # ex : '%Y%m%d%H%M%S' -> YYYYmmddHHMMSS
+        # ex : '%d.%m.%Y %H:%M' -> dd.mm.yyyy HH:MM:SS
+        
     ## Packages
     import pandas as pd
     import numpy as np
@@ -50,8 +59,13 @@ def open_csv_in_df( path , filename , index_date_col , index_var_col , variable_
     else : #one variable
         data = data.rename( columns = { data.columns[ index_var_col ] : variable_name } ) 
         
+    data.set_index( data.columns[ index_date_col ] ) #Index the lines
+
+    data_name_col = np.asarray( data.columns ) #name of the columns in the dataFrame
+    
     data.to_csv( path + filename + '_mod.csv' , index = False , sep = ';' )
     
-    return data
+    return data , data_name_col
+
 
 
