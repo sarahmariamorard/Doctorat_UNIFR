@@ -7,6 +7,7 @@ def find_delimiter_csv( filename ) :
     import csv  #The csv module implements classes to read and write tabular data 
                 #in CSV format. 
     
+    ## Code
     sniffer = csv.Sniffer()  #The Sniffer class is used to deduce the format of a CSV file.
     
     with open( filename ) as fp : #It opens each line of the csv file
